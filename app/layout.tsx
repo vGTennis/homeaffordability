@@ -4,7 +4,7 @@ import Script from 'next/script';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
+      <body>
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
@@ -17,8 +17,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-XXXXXXX');
           `}
         </Script>
-      </head>
-      <body>{children}</body>
+        {children}
+      </body>
     </html>
   );
 }
